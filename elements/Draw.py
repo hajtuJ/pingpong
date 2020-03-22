@@ -16,3 +16,7 @@ class Draw:
 
     def size(self, width, height):
         self.shape.shapesize(width, height)
+
+    def setpos(self, x, y):
+        self.shape.penup()
+        self.shape.goto(x, y)
