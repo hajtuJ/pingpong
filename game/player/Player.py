@@ -13,7 +13,10 @@ class Player:
 
     def set_init_pos(self, screen, right=True):
         half_width = screen.wn.screensize()[0]
+        player_half_width = self.body.width * 10 / 2
+        position = half_width - player_half_width
+        print(position)
         if right:
-            self.body.setpos(half_width - self.body.width / 2, 0)
+            self.body.setpos(position, 0)
         else:
-            self.body.setpos(-half_width + self.body.width / 2, 0)
+            self.body.setpos(-position, 0)
